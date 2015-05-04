@@ -1,0 +1,81 @@
+﻿@model uSales.Models.Produto.Produto
+
+@{
+    ViewBag.Title = "Apagar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Apagar</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoVenda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecoVenda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lucro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lucro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagemPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagemPath)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
